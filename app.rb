@@ -72,7 +72,7 @@ class App < Sinatra::Base
   # refresh task and talks to Instagram to ensure everything's set up.
   get '/status' do
     @client ||= InstagramTokenAgent::Client.new(settings)
-    check_refresh_job
+    # check_refresh_job
     haml(:status, layout: nil)
   end
 
